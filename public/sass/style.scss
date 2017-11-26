@@ -1,0 +1,116 @@
+$green: #00FF00;
+$red: #ff0000;
+$yellow: #ffff00;
+$btc-colour: #FFB01D;
+$eth-colour: #6F7BB9;
+$ltc-colour: #B4B4B4;
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    font-size: 100%;
+
+    body {
+        margin: 0;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+
+        .profiles {
+            height: 80%;
+            display: flex;
+            justify-content: space-between;
+            
+            .profile {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 5% 5% 6%;
+
+                .top {
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    .name {
+                        font-size: 5vw;
+                    }
+                    .investment {
+                        .value {
+                            font-size: 2.5vw;
+                            color: $yellow;
+                        }
+                        .label {
+                            font-size: 1.5vw;
+                        }
+                    }
+                }
+                .profit {
+                    .value {
+                        font-size: 5.5vw;
+                        
+                        &.positive {
+                            color: $green;
+                        }
+                        &.negative {
+                            color: $red;
+                        }
+                    }
+                    .label {
+                        font-size: 2vw;
+                    }
+                }
+                .assets {
+                    .coin {
+                        font-size: 2.5vw;
+                        margin-bottom: 5px;
+
+                        &.btc {
+                            color: $btc-colour;
+                        }
+                        &.eth {
+                            color: $eth-colour;
+                        }
+                        &.ltc {
+                            color: $ltc-colour;
+                        }
+                    }
+                }
+            }
+        }
+        .coins {
+            height: 20%;
+            display: flex;
+            
+            .coin {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                &.btc {
+                    background-color: $btc-colour;
+                }
+                &.eth {
+                    background-color: $eth-colour;
+                }
+                &.ltc {
+                    background-color: $ltc-colour;
+                }
+                .name {
+                    font-size: 2vw;
+                }
+                .current-price {
+                    font-size: 3.5vw;
+                }
+            }
+        }
+    }
+}
