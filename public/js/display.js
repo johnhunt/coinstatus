@@ -88,7 +88,13 @@ function updateName(name, profile) {
 
 function updateInvestment(investment, profile) {
     var element = $('#investment-' + profile);
-    element.text(formatGbpCurrency(investment, false));
+    
+    var displayDecimals = false;
+    if (investment < 1000) {
+        displayDecimals = true;
+    }
+    
+    element.text(formatGbpCurrency(investment, displayDecimals));
 }
 
 function updateProfit(profit, profile) {
@@ -105,7 +111,12 @@ function updateProfit(profit, profile) {
         element.addClass('negative');
     }
 
-    element.text(sign + formatGbpCurrency(profit, false));
+    var displayDecimals = false;
+    if (profit < 1000) {
+        displayDecimals = true;
+    }
+
+    element.text(sign + formatGbpCurrency(profit, displayDecimals));
 }
 
 function updateCoinAmount(coinType, amount, profile) {
