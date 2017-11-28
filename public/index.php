@@ -13,14 +13,15 @@
             <div class="profile">
                 <div class="name" id="name-<?=$profileId?>">-</div>
                 <div class="profit">
-                    <div class="value" id="profit-<?=$profileId?>">-</div>
                     <div class="label">Profit</div>
+                    <div class="value" id="profit-<?=$profileId?>">-</div>
                 </div>
                 <div class="investment">
-                        <div class="value" id="investment-<?=$profileId?>">-</div>
-                        <div class="label">Invested</div>
+                    <div class="label">Investment</div>
+                    <div class="value" id="investment-<?=$profileId?>">-</div>
                 </div>
                 <div class="assets">
+                    <div class="label">Assets</div>
                     <div class="coin btc" id="btc-amount-<?=$profileId?>">-</div>
                     <div class="coin eth" id="eth-amount-<?=$profileId?>">-</div>
                     <div class="coin ltc" id="ltc-amount-<?=$profileId?>">-</div>
