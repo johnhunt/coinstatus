@@ -24,10 +24,10 @@ html {
         font-family: Arial, Helvetica, sans-serif;
 
         .profiles {
-            height: 85%;
+            height: 80%;
             display: flex;
             justify-content: space-between;
-            padding: 5% 0 7%;
+            padding: 4% 0 6%;
             
             .profile {
                 flex: 1;
@@ -41,7 +41,7 @@ html {
                 .profit {
                     .label {
                         font-size: 1.8vw;
-                        margin-bottom: 5px;
+                        margin-bottom: 0.3vw;
                     }
                     .value {
                         font-size: 4vw;
@@ -57,7 +57,7 @@ html {
                 .investment {
                     .label {
                         font-size: 1.8vw;
-                        margin-bottom: 5px;
+                        margin-bottom: 0.3vw;
                     }
                     .value {
                         font-size: 2.5vw;
@@ -67,11 +67,11 @@ html {
                 .assets {
                     .label {
                         font-size: 1.8vw;
-                        margin-bottom: 5px;
+                        margin-bottom: 0.3vw;
                     }
                     .coin {
                         font-size: 2vw;
-                        margin-bottom: 5px;
+                        margin-bottom: 0.3vw;
 
                         &.btc {
                             color: $btc-colour;
@@ -87,7 +87,7 @@ html {
             }
         }
         .coins {
-            height: 15%;
+            height: 20%;
             display: flex;
             
             .coin {
@@ -95,18 +95,24 @@ html {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                border: 1vw solid #000;
                 
+
                 &.btc {
-                    background-color: $btc-colour;
+                    color: $btc-colour;
+                    border-color: $btc-colour;
                 }
                 &.eth {
-                    background-color: $eth-colour;
+                    color: $eth-colour;
+                    border-color: $eth-colour;
                 }
                 &.ltc {
-                    background-color: $ltc-colour;
+                    color: $ltc-colour;
+                    border-color: $ltc-colour;
                 }
                 .name {
                     font-size: 1.8vw;
+                    margin-bottom: 0.3vw;
                 }
                 .current-price {
                     font-size: 3.5vw;
