@@ -24,37 +24,23 @@ html {
         font-family: Arial, Helvetica, sans-serif;
 
         .profiles {
-            height: 80%;
+            height: 85%;
             display: flex;
             justify-content: space-between;
+            padding: 5% 0 7%;
             
             .profile {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                margin: 5% 5% 6%;
 
-                .top {
-                    display: flex;
-                    justify-content: space-around;
-                    
-                    .name {
-                        font-size: 5vw;
-                    }
-                    .investment {
-                        .value {
-                            font-size: 2.5vw;
-                            color: $yellow;
-                        }
-                        .label {
-                            font-size: 1.5vw;
-                        }
-                    }
+                .name {
+                    font-size: 5vw;
                 }
                 .profit {
                     .value {
-                        font-size: 5.5vw;
+                        font-size: 4vw;
                         
                         &.positive {
                             color: $green;
@@ -64,12 +50,21 @@ html {
                         }
                     }
                     .label {
-                        font-size: 2vw;
+                        font-size: 1.8vw;
+                    }
+                }
+                .investment {
+                    .value {
+                        font-size: 2.5vw;
+                        color: $yellow;
+                    }
+                    .label {
+                        font-size: 1.8vw;
                     }
                 }
                 .assets {
                     .coin {
-                        font-size: 2.5vw;
+                        font-size: 2vw;
                         margin-bottom: 5px;
 
                         &.btc {
@@ -86,7 +81,7 @@ html {
             }
         }
         .coins {
-            height: 20%;
+            height: 15%;
             display: flex;
             
             .coin {
@@ -105,7 +100,7 @@ html {
                     background-color: $ltc-colour;
                 }
                 .name {
-                    font-size: 2vw;
+                    font-size: 1.8vw;
                 }
                 .current-price {
                     font-size: 3.5vw;

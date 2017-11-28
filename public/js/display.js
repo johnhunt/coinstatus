@@ -26,19 +26,10 @@ function refreshProfiles() {
     $.get('/api/profiles.php', function (profiles) {
         profileData = profiles;
         
-        updateName(profiles[1].name, 1);
-        updateInvestment(profiles[1].investment, 1);
-        updateCoinAmount('BTC', profiles[1].coins.BTC, 1);
-        updateCoinAmount('ETH', profiles[1].coins.ETH, 1);
-        updateCoinAmount('LTC', profiles[1].coins.LTC, 1);
-        calculateProfit(1);
-        
-        updateName(profiles[2].name, 2);
-        updateInvestment(profiles[2].investment, 2);
-        updateCoinAmount('BTC', profiles[2].coins.BTC, 2);
-        updateCoinAmount('ETH', profiles[2].coins.ETH, 2);
-        updateCoinAmount('LTC', profiles[2].coins.LTC, 2);
-        calculateProfit(2);
+        updateProfile(profiles[1], 1);
+        updateProfile(profiles[2], 2);
+        updateProfile(profiles[3], 3);
+        updateProfile(profiles[4], 4);
     });
 }
 
@@ -52,7 +43,18 @@ function refreshCoinPrices() {
 
         calculateProfit(1);
         calculateProfit(2);
+        calculateProfit(3);
+        calculateProfit(4);
     });
+}
+
+function updateProfile(profile, profileId) {
+    updateName(profile.name, profileId);
+    updateInvestment(profile.investment, profileId);
+    updateCoinAmount('BTC', profile.coins.BTC, profileId);
+    updateCoinAmount('ETH', profile.coins.ETH, profileId);
+    updateCoinAmount('LTC', profile.coins.LTC, profileId);
+    calculateProfit(profileId);
 }
 
 function calculateProfit(profile) {

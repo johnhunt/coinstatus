@@ -9,42 +9,24 @@
     </head>
     <body>
         <div class="profiles">
+            <?php for ($profileId = 1; $profileId <= 4; $profileId++): ?>
             <div class="profile">
-                <div class="top">
-                    <div class="name" id="name-1">-</div>
-                    <div class="investment">
-                        <div class="value" id="investment-1">-</div>
-                        <div class="label">Invested</div>
-                    </div>
-                </div>
+                <div class="name" id="name-<?=$profileId?>">-</div>
                 <div class="profit">
-                    <div class="value" id="profit-1">-</div>
+                    <div class="value" id="profit-<?=$profileId?>">-</div>
                     <div class="label">Profit</div>
                 </div>
-                <div class="assets">
-                    <div class="coin btc" id="btc-amount-1">-</div>
-                    <div class="coin eth" id="eth-amount-1">-</div>
-                    <div class="coin ltc" id="ltc-amount-1">-</div>
-                </div>
-            </div>
-            <div class="profile">
-                <div class="top">
-                    <div class="name" id="name-2">-</div>
-                    <div class="investment">
-                        <div class="value" id="investment-2">-</div>
+                <div class="investment">
+                        <div class="value" id="investment-<?=$profileId?>">-</div>
                         <div class="label">Invested</div>
-                    </div>
-                </div>
-                <div class="profit">
-                    <div class="value" id="profit-2">-</div>
-                    <div class="label">Profit</div>
                 </div>
                 <div class="assets">
-                    <div class="coin btc" id="btc-amount-2">-</div>
-                    <div class="coin eth" id="eth-amount-2">-</div>
-                    <div class="coin ltc" id="ltc-amount-2">-</div>
+                    <div class="coin btc" id="btc-amount-<?=$profileId?>">-</div>
+                    <div class="coin eth" id="eth-amount-<?=$profileId?>">-</div>
+                    <div class="coin ltc" id="ltc-amount-<?=$profileId?>">-</div>
                 </div>
             </div>
+            <?php endfor ?>
         </div>
         <div class="coins">
                 <div class="coin btc">
